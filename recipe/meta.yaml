@@ -20,7 +20,7 @@ build:
 
 requirements:
 
-  build:
+  host:
     - python
     - setuptools
     - pyqt 4.11.*|5.6.*
