@@ -21,7 +21,7 @@ build:
 
 requirements:
 
-  build:
+  host:
     - python
     - pip
     # We need to include PyQt5 here to make sure that PyQt5 doesn't
