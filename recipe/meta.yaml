@@ -53,7 +53,7 @@ requirements:
     - bottleneck >=1.2
     - mpl-scatter-density >=0.3
     - setuptools >=1.0
-    - pyqt 5.6.*
+    - pyqt >=5.6,<6.0a0
 
     # Optional dependencies (defined in ``extras_require``)
     - scipy
