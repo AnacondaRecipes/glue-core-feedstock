@@ -12,6 +12,7 @@ source:
 
 build:
   number: 0
+  skip: True  # [ppc64le]
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - glue = glue.main:main
