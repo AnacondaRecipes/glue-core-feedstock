@@ -19,6 +19,8 @@ build:
     - glue-config = glue.config_gen:main
     - glue-deps = glue._deps:main
   osx_is_app: True
+  ignore_run_exports:
+    - pyqt
 
 requirements:
 
