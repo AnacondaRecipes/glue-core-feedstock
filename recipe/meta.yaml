@@ -32,6 +32,7 @@ requirements:
     # get included in install_requires
     - pyqt >=5.6
     - setuptools_scm
+    - intel-openmp  # [linux]
 
   run:
 
@@ -58,7 +59,6 @@ requirements:
     - echo >=0.5
     - scipy >=1.0
     - jupyter_client <7
-    - intel-openmp  # [linux]
 #    - pyqt >=5.6,<6.0a0
 
     # Optional dependencies (defined in ``extras_require``)
