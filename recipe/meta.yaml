@@ -1,4 +1,4 @@
-{% set version = "0.15.6" %}
+{% set version = "1.0.1" %}
 
 package:
   name: glue-core
@@ -8,10 +8,10 @@ source:
 
   fn: glue-core-{{version}}.tar.gz
   url: https://pypi.io/packages/source/g/glue-core/glue-core-{{version}}.tar.gz
-  sha256: f9c753f13de918671c0fcab680404390b2e133c5e85c7248e4d279e8b29ec266
+  sha256: 32e7f3742bc944d0012766945eb5950ec49845c464227f34e56a380d07371fca
 
 build:
-  number: 0
+  number: 1
   skip: True  # [ppc64le]
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
@@ -23,47 +23,45 @@ build:
     - pyqt
 
 requirements:
-
   host:
-    - python
+    - python >=3.6
     - pip
     # We need to include PyQt5 here to make sure that PyQt5 doesn't
     # get included in install_requires
-    - pyqt >=5.6
+    - pyqt >=5.9
     - setuptools_scm
-
+    - setuptools >=30.3.0
+    - wheel
   run:
-
     # The following is needed to make sure that the package works as a GUI
     # application (glue needs to be run with python.app, not python)
     - python.app  # [osx]
 
     # Required dependencies
-    - python
-    - numpy >=1.9
-    - pandas >=0.14
-    - astropy >=2.0
-    - matplotlib >=2.0
-    - qtpy >=1.2
+    - python >=3.6
+    - numpy >=1.16
+    - matplotlib >=3.2
+    - scipy >=1.0
+    - pandas >=1.0
+    - echo >=0.5
+    - astropy >=4.0
+    - setuptools >=30.3.0
+    - qtpy >=1.9
     - ipython >=4.0
-    - ipykernel
-    - qtconsole
+    - ipykernel >=4.0,!=5.0.0,!=5.1.0
+    - qtconsole >=4.3
+    - jupyter_client <7
     - dill >=0.2
-    - xlrd >=1.0
-    - h5py >=2.4
+    - xlrd >=1.2
+    - h5py >=2.10
+    - mpl-scatter-density >=0.7
     - bottleneck >=1.2
-    - mpl-scatter-density >=0.4
-    - setuptools >=1.0
-    - pyqt >=5.6,<6.0a0
 
     # Optional dependencies (defined in ``extras_require``)
-    - scipy
     - scikit-image
+    - pillow !=7.1.0
+    # Used to explort plots to Plot.ly
     - plotly
-
-    # Temporary: the scikit-image conda package is missing the dask dependency
-    # so we add it here for now
-    - dask
 
 test:
   imports:
@@ -79,7 +77,8 @@ test:
 
 about:
   home: http://glueviz.org
-  license: BSD 3-Clause
+  license: BSD-3-Clause
+  license_family: BSD
   license_file: LICENSE
   summary: Multi-dimensional linked data exploration
   dev_url: https://github.com/glue-viz/glue
