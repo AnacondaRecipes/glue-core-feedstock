@@ -12,7 +12,6 @@ source:
 
 build:
   number: 1
-  noarch: python
   skip: True  # [ppc64le]
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
@@ -63,10 +62,6 @@ requirements:
     - pillow !=7.1.0
     # Used to explort plots to Plot.ly
     - plotly
-
-    # Temporary: the scikit-image conda package is missing the dask dependency
-    # so we add it here for now
-    #- dask
 
 test:
   imports:
