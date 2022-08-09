@@ -29,8 +29,8 @@ build:
   skip: True  # [py<37]
   # there is no qt support on s390x, nor ppc64le
   skip: True  # [linux and (ppc64le or s390x)]
-requirements:
 
+requirements:
   host:
     - python
     - pip
