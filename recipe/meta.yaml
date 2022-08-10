@@ -62,10 +62,8 @@ requirements:
     - scipy >=1.1
     - setuptools >=30.3
     - xlrd >=1.2
-
     # Optional dependencies (defined in ``extras_require``)
     - scikit-image
-
     # Temporary: the scikit-image conda package is missing the dask dependency
     # so we add it here for now
     - dask
