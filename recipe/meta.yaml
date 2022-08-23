@@ -1,4 +1,4 @@
-{% set version = "1.0.1" %}
+{% set version = "1.2.4" %}
 
 package:
   name: glue-core
@@ -8,11 +8,11 @@ source:
 
   fn: glue-core-{{version}}.tar.gz
   url: https://pypi.io/packages/source/g/glue-core/glue-core-{{version}}.tar.gz
-  sha256: 32e7f3742bc944d0012766945eb5950ec49845c464227f34e56a380d07371fca
+  sha256: e8747b5a4f98241d707a5d6ba7498033d0c450130cc1f6074a0cc9ef6de12853
 
 build:
-  number: 1
-  skip: True  # [ppc64le or py<36]
+  number: 0
+  skip: True  # [ppc64le or py<37]
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - glue = glue.main:main
@@ -39,10 +39,10 @@ requirements:
 
     # Required dependencies
     - python
-    - numpy >=1.16
+    - numpy >=1.17
     - matplotlib >=3.2
-    - scipy >=1.0
-    - pandas >=1.0
+    - scipy >=1.1
+    - pandas >=1.2
     - echo >=0.5
     - astropy >=4.0
     - setuptools >=30.3.0
@@ -50,17 +50,15 @@ requirements:
     - ipython >=4.0
     - ipykernel >=4.0,!=5.0.0,!=5.1.0
     - qtconsole >=4.3
-    - jupyter_client <7
     - dill >=0.2
     - xlrd >=1.2
     - h5py >=2.10
     - mpl-scatter-density >=0.7
-    - bottleneck >=1.2
 
     # Optional dependencies (defined in ``extras_require``)
     - scikit-image
     - pillow !=7.1.0
-    # Used to explort plots to Plot.ly
+    # Used to export plots to Plot.ly
     - plotly
 
 test:
@@ -72,7 +70,7 @@ test:
     - glue --version
     - glue-deps list
 
-# NOTE: we deliberatey do NOT include an app entry here, because we instead do this
+# NOTE: we deliberately do NOT include an app entry here, because we instead do this
 # in the glueviz meta-package (we don't want glue to appear twice in the navigator)
 
 about:
@@ -82,7 +80,7 @@ about:
   license_file: LICENSE
   summary: Multi-dimensional linked data exploration
   dev_url: https://github.com/glue-viz/glue
-  doc_url: http://glueviz.rtfd.io
+  doc_url: http://docs.glueviz.org/en/stable/
 
 extra:
   recipe-maintainers:
