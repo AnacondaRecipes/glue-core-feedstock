@@ -84,7 +84,7 @@ about:
   license_file: LICENSE
   summary: Multi-dimensional linked data exploration
   dev_url: https://github.com/glue-viz/glue
-  doc_url: http://docs.glueviz.org/en/stable/
+  doc_url: http://docs.glueviz.org/
 
 extra:
   recipe-maintainers:
