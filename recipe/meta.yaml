@@ -54,7 +54,7 @@ requirements:
     - xlrd >=1.2
     - h5py >=2.10
     - mpl-scatter-density >=0.7
-    - openpyxl >= 3.0
+    - openpyxl >=3.0
 
     # Optional dependencies (defined in ``extras_require``)
     - scikit-image
