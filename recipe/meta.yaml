@@ -40,7 +40,7 @@ requirements:
     # Required dependencies
     - python
     - numpy >=1.17
-    - matplotlib >=3.2
+    - matplotlib-base >=3.2
     - scipy >=1.1
     - pandas >=1.2
     - echo >=0.5
@@ -54,6 +54,7 @@ requirements:
     - xlrd >=1.2
     - h5py >=2.10
     - mpl-scatter-density >=0.7
+    - openpyxl >= 3.0
 
     # Optional dependencies (defined in ``extras_require``)
     - scikit-image
@@ -62,11 +63,14 @@ requirements:
     - plotly
 
 test:
+  requires:
+    - pip
   imports:
     - glue
     - glue.core
     - glue.app.qt
   commands:
+    - pip check
     - glue --version
     - glue-deps list
 
