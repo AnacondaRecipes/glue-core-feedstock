@@ -26,7 +26,7 @@ requirements:
   run:
     - python
     - numpy >=1.17
-    - matplotlib >=3.2
+    - matplotlib-base >=3.2
     - scipy >=1.1
     - pandas >=1.2
     - echo >=0.6
@@ -103,6 +103,7 @@ test:
     - glue.core.visual
   commands:
     - pip check
+    - glue-config --version
     - pytest --pyargs glue.tests
   requires:
     - pip
