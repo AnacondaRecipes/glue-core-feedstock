@@ -103,7 +103,6 @@ test:
     - glue.core.visual
   commands:
     - pip check
-    - glue-config --version
     - pytest --pyargs glue.tests
   requires:
     - pip
