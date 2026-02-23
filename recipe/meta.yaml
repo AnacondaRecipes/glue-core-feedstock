@@ -44,7 +44,6 @@ requirements:
     - shapely >=2.0
     # recommended
     - scikit-image
-    - fast_histogram >=0.12
   run_constrained:
     # See https://github.com/python-pillow/Pillow/issues/4509
     # for why we exclude pillow 7.1.0
