@@ -113,8 +113,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  description: |
-    Glue is a python project to link visualizations of scientific datasets across many files.
+  description: Glue is a python project to link visualizations of scientific datasets across many files.
   dev_url: https://github.com/glue-viz/glue
   doc_url: https://docs.glueviz.org
 
