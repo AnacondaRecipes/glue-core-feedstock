@@ -1,13 +1,13 @@
 {% set name = "glue-core" %}
-{% set version = "1.25.0" %}
+{% set version = "1.27.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_')}}-{{ version }}.tar.gz
-  sha256: c0359f84417bc869f2c91fe7baa0f50e62061036e995455bca58b449f931bf72
+  sha256: df5f0c2acf8c4f9190ad85ab75d8899e5e6e7f5092f8bdd1c7198b7401c6c4c3
 
 build:
   number: 0
@@ -20,7 +20,6 @@ requirements:
   host:
     - python
     - pip
-    - setuptools_scm
     - setuptools >=61.2
     - wheel
     - setuptools-scm
