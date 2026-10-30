@@ -248,7 +248,7 @@ test:
     - glue.viewers.volume3d.viewer_state
   commands:
     - pip check
-    - pytest --pyargs glue  # [py!=310 and not ((win and arm64) and py==312)]
+    - pytest --pyargs glue  # [py!=310]
     - pytest --pyargs glue {{ py310_deselect }}  # [py==310]
   requires:
     - pip
